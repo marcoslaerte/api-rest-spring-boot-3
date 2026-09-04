@@ -1,12 +1,11 @@
-package med.voll.api_rest_spring_boot_3.paciente;
+package med.voll.api_rest_spring_boot_3.domain.paciente;
 
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api_rest_spring_boot_3.endereco.Endereco;
+import med.voll.api_rest_spring_boot_3.domain.endereco.Endereco;
 
 @Getter
 @EqualsAndHashCode(of = "id")

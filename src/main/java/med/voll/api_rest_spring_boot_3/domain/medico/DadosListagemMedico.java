@@ -1,4 +1,4 @@
-package med.voll.api_rest_spring_boot_3.medico;
+package med.voll.api_rest_spring_boot_3.domain.medico;
 
 public record DadosListagemMedico(Long id, String nome, String email, String crm, Especialidade especialidade) {
 

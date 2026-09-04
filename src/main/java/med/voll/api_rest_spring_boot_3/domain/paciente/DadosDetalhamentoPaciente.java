@@ -1,6 +1,4 @@
-package med.voll.api_rest_spring_boot_3.paciente;
-
-import med.voll.api_rest_spring_boot_3.endereco.Endereco;
+package med.voll.api_rest_spring_boot_3.domain.paciente;
 
 public record DadosDetalhamentoPaciente(Long id, String nome, String email, String cpf) {
 

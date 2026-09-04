@@ -1,4 +1,4 @@
-package med.voll.api_rest_spring_boot_3.medico;
+package med.voll.api_rest_spring_boot_3.domain.medico;
 
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api_rest_spring_boot_3.controller.DadosAtualizacaoMedico;
-import med.voll.api_rest_spring_boot_3.endereco.Endereco;
+import med.voll.api_rest_spring_boot_3.domain.endereco.Endereco;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")

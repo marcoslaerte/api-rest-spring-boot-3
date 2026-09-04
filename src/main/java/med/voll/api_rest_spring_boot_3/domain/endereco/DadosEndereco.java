@@ -1,4 +1,4 @@
-package med.voll.api_rest_spring_boot_3.endereco;
+package med.voll.api_rest_spring_boot_3.domain.endereco;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
