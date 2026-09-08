@@ -1,4 +1,4 @@
-package med.voll.api_rest_spring_boot_3.usuario;
+package med.voll.api_rest_spring_boot_3.domain.usuario;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
