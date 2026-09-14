@@ -3,9 +3,13 @@ package med.voll.api_rest_spring_boot_3.domain.consulta.validacoes;
 import med.voll.api_rest_spring_boot_3.domain.ValidacaoException;
 import med.voll.api_rest_spring_boot_3.domain.consulta.ConsultaRepository;
 import med.voll.api_rest_spring_boot_3.domain.consulta.DadosAgendamentoConsulta;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-public class ValidadorPacienteSemOutraConsultaNoDia {
+@Component
+public class ValidadorPacienteSemOutraConsultaNoDia implements ValidadorAgendamentoDeConsulta {
 
+    @Autowired
     private ConsultaRepository repository;
 
     public void validar(DadosAgendamentoConsulta dados) {
@@ -13,7 +17,7 @@ public class ValidadorPacienteSemOutraConsultaNoDia {
         var ultimoHorario = dados.data().withHour(18);
         var pacientePossuiOutraConsultaNoDia = repository.existsByPacienteIdAndDataBetween(dados.idPaciente(), primeiroHorario, ultimoHorario);
         if (pacientePossuiOutraConsultaNoDia) {
-            throw new ValidacaoException("Paciente já possui uma consulta agendada nesse dia");
+            throw new ValidacaoException("Paciente já possui uma consulta agendada nesse dia!");
         }
     }
 }
