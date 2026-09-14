@@ -1,0 +1,24 @@
+package med.voll.api_rest_spring_boot_3.domain.consulta.validacoes;
+
+import med.voll.api_rest_spring_boot_3.domain.ValidacaoException;
+import med.voll.api_rest_spring_boot_3.domain.consulta.DadosAgendamentoConsulta;
+import med.voll.api_rest_spring_boot_3.domain.medico.MedicoRepository;
+
+public class ValidadorMedicoAtivo {
+
+    private MedicoRepository repository;
+
+    public void validar(DadosAgendamentoConsulta dados) {
+
+        // Escolha do médico opcional
+        if (dados.idMedico() == null) {
+            return;
+        }
+
+        var medicoEstaAtivo = repository.findAtivoById(dados.idMedico());
+        if(!medicoEstaAtivo) {
+            throw new ValidacaoException("Consulta não pode ser agendada com médico excluído");
+        }
+
+    }
+}
