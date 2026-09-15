@@ -1,4 +1,4 @@
-package med.voll.api_rest_spring_boot_3.domain.consulta.validacoes;
+package med.voll.api_rest_spring_boot_3.domain.consulta.validacoes.agendamento;
 
 import med.voll.api_rest_spring_boot_3.domain.ValidacaoException;
 import med.voll.api_rest_spring_boot_3.domain.consulta.DadosAgendamentoConsulta;
